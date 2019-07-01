@@ -28,3 +28,38 @@
 2. 使用vue-resource的this.$http.get获取数据
 3. 获取到的数据, 要保存到 data 中
 4. 使用v-for循环渲染 每个item项, 要使用key
+
+## 改造 九宫格 区域的样式
+
+## 改造 新闻资讯 路由链接
+
+## 新闻资讯 页面 制作
+
+1. 绘制界面, 使用mui中的media-list
+2. 使用vue-resource获取数据 /api/getnewslist
+3. 渲染真实 数据
+
+## 实现 新闻资讯链表 点击跳转到新闻详情
+
+1. 把列表中的每一项改造为 router-link, 同时, 在跳转的时候应该提供唯一的ID标识符
+2. 创建新闻详情组件页面 NewsInfo.vue
+3. 在 路由模块中, 将新闻详情的路由地址 和 组件页面对应起来
+
+## 实现新闻详情页的渲染
+
+1. 发送ajax请求  /api/getnew/:newid
+
+## 单独封装一个 comment.vue 评论子组件
+
+1. 县创建一个单独的 comment.vue 组件模板
+2. 在需要使用comment.vue 的地方手动导入comment组件
+3. 在父组件中, 使用'components'属性, 将comment注册为自己的子组件
+4. 以 标签形式在页面中引用
+
+## 获取所有的评论数据, 显示到页面中 /api/getcomments/:artid?pageindex=1
+
+## 实现点击加载更多评论的功能
+
+1. 为按钮绑定事件, 请求下一页数据
+2. 点击加载更多, 让pageIndex++, 然后重新吊桶this.getCommnets() 方法从新获取最新一页数据
+3. 为了防止新数据覆盖老数据, 我们在获得新数据的时候, 应该让老数据调用数组的 concat 方法, 拼接上新数组
