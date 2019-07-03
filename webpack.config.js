@@ -37,6 +37,7 @@ module.exports = {
             { test: /\.(ttf|eot|svg|woff|woff2)$/, use: 'url-loader' }, // 处理css中的url, 参数限制图片转为base64的最大内存, 单位byte
             { test: /\.js$/, use: 'babel-loader', exclude: /node_modules/ }, // 配置babel来转化高级的es6语法
             { test: /\.vue$/, use: 'vue-loader' }, // 配置vue
+            { test: /vue-preview.src.*?js$/,  use: 'babel-loader' },
         ]
     },
     resolve: {
