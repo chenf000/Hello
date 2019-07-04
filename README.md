@@ -114,3 +114,5 @@
 
 1. 图文详情页面绘制  api/goods/getdesc/:id
 2. 商品评论页面绘制  
+
+## 购物车页面 api/goods/getshopcarlist/:id
